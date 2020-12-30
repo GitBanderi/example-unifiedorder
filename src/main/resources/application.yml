@@ -7,7 +7,7 @@ spring:
                  ?useSSL=false&characterEncoding=utf-8&useUnicode=true&useSSL=false\
                  &allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai"
     username: root
-    password: 'dhStrive1997'
+    password: 'root'
     driver-class-name: com.mysql.cj.jdbc.Driver
     druid:
       #连接池配置(通常来说，只需要修改initialSize、minIdle、maxActive

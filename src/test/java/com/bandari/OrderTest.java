@@ -23,21 +23,25 @@ class OrderTest {
 
   @BeforeEach
   public void configOrder() {
+    //模拟确认订单
     UnifiedConfigOrderBo configOrderBo = new UnifiedConfigOrderBo();
     configOrderBo.setNum(1);
     configOrderBo.setSpuId(1L);
     configOrderBo.setSkuId(2L);
-    configOrderBo.setProdType(ProdTypeEnum.NEW_MEMBER.getCode());
+    //NEW_MEMBER:新会员专享商品 NEW_PEOPLE:新人专享商品 ORDINARY:普通商品
+    configOrderBo.setProdType(ProdTypeEnum.ORDINARY.getCode());
     orderController.unifiedConfigOrder(configOrderBo);
   }
 
   @Test
   public void submitOrder() {
+    //模拟提交订单
     orderController.unifiedSubmitOrder();
   }
 
   @AfterEach
   public void paySuccessOrder() {
+    //模拟订单支付成功
     orderController
         .unifiedPaySuccessOrder(new UnifiedPaySuccessOrderBo());
   }
